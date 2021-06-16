@@ -16,3 +16,60 @@ Image placeholder?
 
 After the Multstring vector is fully initialized, we progress to the next user prompt below:
 
+|![Alt Text](menu.png)|
+|:--:|
+|User Prompt|
+
+Based on the user’s choice on this prompt, we either compare one sort over a variety of data values or compare two sorts over the whole .txt file.
+
+I’ll start by explaining my reasoning on the singular sort comparison. After a user chooses which sort that they would like to use, we pass the sorting function along with the appropriate parameters to one of our time functions either generalTimeTwoParam or generalTime3Param. These functions will be explained shortly.
+
+|![Alt Text](singlesort.png)|
+|:--:|
+|Single Sort Implementation|
+
+As mentioned above, we pass the sorting algorithm along with the appropriate parameters into our timing functions pictured below. The generalTimeTwoParam function handles bubble sort, selection sort and insertion sort. The generalTimeThreeParam function takes care of merge sort and quicksort.
+
+
+|![Alt Text](timefunct.png)|
+|:--:|
+|Time Functions|
+
+
+
+
+
+The display function pictured below for the singular sort comparison takes three int arrays as arguments. Each of these arrays stores the times of the five calls to the specific sort function. So in total, we would display fifteen sorting times when we call our printTimes1 function. The average for each differing element run is calculated by taking all of the members of the appropriate array and dividing by five. I used blank spaces to space out the times in their appropriate column.
+
+|![Alt Text](displayfunct1.png)|
+|:--:|
+|Display Function|
+
+Now it’s time to account for the program if the user decides to select the option to compare multiple sorts. The implementation is very similar to the singular sorter option, all we really change in regards is the parameters that are passed to the sort functions. We replaced the 5000, 10000 and 20000 numbered values with the variable count. Since count was incremented every time a word was streamed in via infile, count represents the whole .txt file of the selected play. 
+
+<ins>Product</ins>
+
+After testing the functions, they all worked as expected with reasonable sorting times for each sorting algorithm. An example is bubble sort below.
+
+
+|![Alt Text](bubblesort.png)|
+|:--:|
+|Bubble Sort|
+
+Below is my implementation of the comparison of two sorts. As expected the average time of bubble sort was lower than the average time of selection sort. The output seems accurate.
+
+|![Alt Text](bubbleandselection.png)|
+|:--:|
+|Bubble Sort and Selection Sort comparison|
+
+
+
+
+
+
+
+
+
+
+
+
